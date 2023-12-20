@@ -11,6 +11,7 @@
 
     <modules>
         <module>spring-mongo-restapi</module>
+        <module>spring-hello-world</module>
     </modules>
 
 
