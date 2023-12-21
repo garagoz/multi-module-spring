@@ -1,2 +1,9 @@
-package com.garagoz.repository;public class UserRepository {
+package com.garagoz.repository;
+
+import com.garagoz.model.User;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends MongoRepository<User, String> {
 }
