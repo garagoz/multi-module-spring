@@ -13,6 +13,7 @@
         <module>spring-mongo-restapi</module>
         <module>spring-hello-world</module>
         <module>spring-elasticsearch</module>
+        <module>spring-datajpa-postgresql</module>
     </modules>
 
 

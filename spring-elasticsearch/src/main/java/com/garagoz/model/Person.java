@@ -22,6 +22,6 @@ public class Person {
     public String lastname;
     @Field(name = "address", type = FieldType.Text)
     public String address;
-    @Field(name = "dateofbirth", type = FieldType.Text)
+    @Field(name = "dateofbirth", type = FieldType.Date)
     public Date dateofbirth;
 }
