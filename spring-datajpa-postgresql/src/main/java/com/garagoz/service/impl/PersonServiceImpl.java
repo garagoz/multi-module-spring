@@ -9,6 +9,7 @@ import com.garagoz.service.PersonService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.util.Assert;
 
 import java.awt.print.Pageable;
 import java.util.ArrayList;
@@ -25,6 +26,9 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional
     public PersonDto save(PersonDto personDto) {
+
+        Assert.isNull(personDto.name, "name is required");
+
         Person person = new Person();
         person.name = personDto.name;
         person.lastname = personDto.lastname;
@@ -50,7 +54,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public List<PersonDto> getAll(PersonDto personDto) {
+    public List<PersonDto> getAll() {
         List<Person> personList =  personRepository.findAll();
         List<PersonDto> personDtoList = new ArrayList<>();
         personList.forEach(item->{
@@ -65,8 +69,8 @@ public class PersonServiceImpl implements PersonService {
         return personDtoList;
     }
 
-    @Override
-    public Page<PersonDto> getAll(Pageable pageable) {
-        return null;
-    }
+//    @Override
+//    public Page<PersonDto> getAll(Pageable pageable) {
+//        return null;
+//    }
 }

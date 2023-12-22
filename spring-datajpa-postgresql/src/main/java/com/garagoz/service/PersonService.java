@@ -11,6 +11,6 @@ import java.util.List;
 public interface PersonService {
     PersonDto save(PersonDto personDto);
     void delete(Long id);
-    List<PersonDto> getAll(PersonDto personDto);
-    Page<PersonDto> getAll(Pageable pageable);
+    List<PersonDto> getAll();
+    //Page<PersonDto> getAll(Pageable pageable);
 }
