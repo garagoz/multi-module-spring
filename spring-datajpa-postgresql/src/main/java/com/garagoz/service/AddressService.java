@@ -1,4 +1,4 @@
 package com.garagoz.service;
 
-public class AddressService {
+public interface AddressService {
 }

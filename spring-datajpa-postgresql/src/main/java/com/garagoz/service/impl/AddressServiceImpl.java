@@ -1,4 +1,6 @@
 package com.garagoz.service.impl;
 
-public class AddressServiceImpl {
+import com.garagoz.service.AddressService;
+
+public class AddressServiceImpl implements AddressService {
 }
