@@ -2,12 +2,15 @@ package com.garagoz.service;
 
 import com.garagoz.dto.PersonDto;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.awt.print.Pageable;
+import java.util.List;
 
+@Service
 public interface PersonService {
     PersonDto save(PersonDto personDto);
     void delete(Long id);
-    PersonDto getAll(PersonDto personDto);
+    List<PersonDto> getAll(PersonDto personDto);
     Page<PersonDto> getAll(Pageable pageable);
 }

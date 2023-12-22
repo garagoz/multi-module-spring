@@ -28,7 +28,7 @@ public class Address implements Serializable {
     @Column(name = "active")
     public Boolean active;
 
-    enum AddressType {
+    public enum AddressType {
         HOME_ADDRESS,
         WORK_ADDRESS,
         OTHER
