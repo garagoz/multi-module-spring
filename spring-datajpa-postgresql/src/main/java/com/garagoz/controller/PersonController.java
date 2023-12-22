@@ -4,10 +4,7 @@ import com.garagoz.dto.PersonDto;
 import com.garagoz.service.impl.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,7 +16,8 @@ public class PersonController {
     private PersonServiceImpl personService;
 
     @PostMapping
-    public ResponseEntity<PersonDto> add(PersonDto personDto) {
+    public ResponseEntity<PersonDto> add(@RequestBody PersonDto personDto) {
+        System.out.println(personDto.name);
         return ResponseEntity.ok(personService.save(personDto));
     }
 
